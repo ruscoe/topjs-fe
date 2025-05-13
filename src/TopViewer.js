@@ -49,7 +49,7 @@ function TopViewer() {
                             <td class="pid">{process.pid}</td>
                             <td class="user">{process.user}</td>
                             <td class="cpu">{process.cpu}%</td>
-                            <td class="mem">{process.mem} mebibytes (MiB)</td>
+                            <td class="mem">{process.mem} MiB</td>
                             <td class="time">{process.time}</td>
                             <td class="command">{process.command}</td>
                         </tr>
