@@ -29,6 +29,34 @@ function TopViewer() {
                     <li class="free-mem">Free Memory: {data.memory.free} mebibytes (MiB)</li>
                 </ul>
             </div>
+
+            <div id="processes">
+                <h2>Processes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="pid">PID</th>
+                            <th class="user">User</th>
+                            <th class="cpu">CPU</th>
+                            <th class="memory">Memory</th>
+                            <th class="time">Time</th>
+                            <th class="command">Command</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {data.processes.map((process) => (
+                        <tr>
+                            <td class="pid">{process.pid}</td>
+                            <td class="user">{process.user}</td>
+                            <td class="cpu">{process.cpu}%</td>
+                            <td class="mem">{process.mem} mebibytes (MiB)</td>
+                            <td class="time">{process.time}</td>
+                            <td class="command">{process.command}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
         </section>
     );
 }
