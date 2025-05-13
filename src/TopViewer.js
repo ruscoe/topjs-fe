@@ -22,7 +22,13 @@ function TopViewer() {
 
     return (
         <section id="top">
-
+            <div id="memory">
+                <h2>Memory</h2>
+                <ul>
+                    <li class="used-mem">Used Memory: {data.memory.used} mebibytes (MiB)</li>
+                    <li class="free-mem">Free Memory: {data.memory.free} mebibytes (MiB)</li>
+                </ul>
+            </div>
         </section>
     );
 }
